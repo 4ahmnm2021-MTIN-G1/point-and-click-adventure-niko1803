@@ -8,7 +8,11 @@ public class InteractibalObject : MonoBehaviour
     public GameObject commandMenu;
     public Transform reposition;
     public UIManager uIManager;
+    public Text df;
+    public string inspectText;
 
+    public SpriteRenderer sr;
+    public Image img;
 
    public void Start()
     {
@@ -26,5 +30,7 @@ public class InteractibalObject : MonoBehaviour
         commandMenu.active = true;
         commandMenu.transform.position = reposition.position;
         uIManager.activeIO = this;
+        // df.text = inspectText;
+        
     }
 }

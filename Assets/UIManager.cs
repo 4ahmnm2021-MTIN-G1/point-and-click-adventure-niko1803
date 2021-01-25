@@ -8,6 +8,8 @@ public class UIManager : MonoBehaviour
 
     public GameObject commandMenu;
     public InteractibalObject activeIO;
+    //public Text df;
+    //public string inspectText;
 
 
     // Start is called before the first frame update
@@ -22,8 +24,18 @@ public class UIManager : MonoBehaviour
         
     }
 
-    public void OnMouseDown()
+    public void Inspect()
     {
-        commandMenu.active = true; 
+       
+        activeIO.df.text = activeIO.inspectText;
+        Debug.Log("Click UI erkannt");
+
     }
+
+    public void Collect()
+    {
+        activeIO.img.sprite = activeIO.sr.sprite;
+    }
+
+    
 }
